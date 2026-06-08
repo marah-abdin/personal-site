@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marahabdin.com/sitemap.xml

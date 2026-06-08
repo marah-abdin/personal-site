@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Publications &middot; Marah Abdin</title>
+<meta name="description" content="Publications by Marah Abdin." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:#f2f5f2; --panel:#e4f0e9; --ink:#0a2c30; --muted:#506c76; --faint:#8aa6a4;
+    --line:#c6d8d1; --teal:#0f4953; --green:#1c7a55; --pink:#d86592; --accent-weak:rgba(28,122,85,.14); --sel:rgba(242,190,206,.45);
+  }
+  html[data-theme="dark"]{
+    --bg:#123439; --panel:#1a444b; --ink:#ecf5f2; --muted:#a1bfbc; --faint:#688b89;
+    --line:#224d54; --teal:#0c4f57; --green:#5fc99c; --pink:#f0a0bb; --accent-weak:rgba(95,201,156,.16); --sel:rgba(240,160,187,.24);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--ink);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .35s,color .35s}
+  ::selection{background:var(--sel)}
+  a{color:var(--ink);text-decoration:none}
+  .topbar{height:4px;background:linear-gradient(90deg,var(--green),var(--pink))}
+
+  .toggle{position:fixed;top:16px;right:16px;z-index:50;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;transition:transform .25s,color .18s,border-color .18s}
+  .toggle:hover{color:var(--pink);border-color:var(--pink);transform:rotate(18deg)}
+
+  .wrap{max-width:660px;margin:0 auto;padding:0 28px}
+  header{padding:56px 0 6px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .back{font-size:14px;color:var(--green);border-bottom:1px solid var(--accent-weak)}
+  .back:hover{border-color:var(--green)}
+  h1{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:14.5px;padding:14px 0 6px}
+  .sub a{display:inline-block;color:var(--green);font-weight:600;border:1px solid var(--green);border-radius:20px;padding:3px 13px;margin-left:2px;transition:background .15s,color .15s}
+  .sub a:hover{background:var(--green);color:var(--bg)}
+
+  .group{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.12em;margin:34px 0 4px}
+  .p{display:block;padding:13px 14px;margin:0 -14px;border-radius:9px;transition:background .15s,transform .15s}
+  .p:hover{background:var(--panel);transform:translateX(3px)}
+  .p .t{font-weight:600;font-size:15.5px}
+  .p:hover .t{color:var(--green)}
+  .p .au{font-size:13px;color:var(--faint);margin-top:3px}
+  .p .au b{color:var(--ink);font-weight:600}
+  .p .m{font-size:12.5px;color:var(--faint);margin-top:1px}
+
+  .btns{margin:30px 0;display:flex;gap:10px;flex-wrap:wrap}
+  .btns a{border:1px solid var(--line);border-radius:22px;padding:7px 16px;font-size:14px;font-weight:500;color:var(--muted)}
+  .btns a:hover{color:var(--green);border-color:var(--green);background:var(--accent-weak)}
+  footer{padding:10px 0 70px;color:var(--faint);font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<button class="toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">☾</button>
+
+<div class="wrap">
+
+  <header>
+    <h1>Publications</h1>
+    <a class="back" href="index.html">&larr; Back</a>
+  </header>
+  <div class="sub">
+    The always-current list is on
+    <a href="https://scholar.google.com/citations?user=uJz6U0kAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
+  </div>
+
+  <div class="group">Language models &amp; synthetic data</div>
+
+  <a class="p" href="https://arxiv.org/abs/2605.27605" target="_blank" rel="noopener">
+    <div class="t">Laguna M.1 / XS.2 Technical Report</div>
+    <div class="au">J. Abadji, <b>M. Abdin</b>, C. Adams, et al.</div>
+    <div class="m">Poolside &middot; 2026</div></a>
+  <a class="p" href="https://arxiv.org/abs/2504.21318" target="_blank" rel="noopener">
+    <div class="t">Phi-4-reasoning Technical Report</div>
+    <div class="au"><b>M. Abdin</b>, S. Agarwal, A. Awadallah, et al.</div>
+    <div class="m">arXiv &middot; 2025</div></a>
+  <a class="p" href="https://arxiv.org/abs/2412.08905" target="_blank" rel="noopener">
+    <div class="t">Phi-4 Technical Report</div>
+    <div class="au"><b>M. Abdin</b>, J. Aneja, H. Behl, S. Bubeck, et al.</div>
+    <div class="m">arXiv &middot; 2024</div></a>
+  <a class="p" href="https://arxiv.org/abs/2404.14219" target="_blank" rel="noopener">
+    <div class="t">Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone</div>
+    <div class="au"><b>M. Abdin</b>, J. Aneja, H. Awadalla, et al.</div>
+    <div class="m">arXiv &middot; 2024</div></a>
+  <a class="p" href="https://arxiv.org/abs/2410.15226" target="_blank" rel="noopener">
+    <div class="t">On the Diversity of Synthetic Data and its Impact on Training LLMs</div>
+    <div class="au">H. Chen, A. Waheed, X. Li, &hellip;, <b>M. Abdin</b></div>
+    <div class="m">arXiv &middot; 2024</div></a>
+  <a class="p" href="https://arxiv.org/abs/2310.15511" target="_blank" rel="noopener">
+    <div class="t">KITAB: Evaluating LLMs on Constraint Satisfaction for Information Retrieval</div>
+    <div class="au"><b>M. Abdin</b>, S. Gunasekar, V. Chandrasekaran, et al.</div>
+    <div class="m">ICLR &middot; 2024</div></a>
+  <a class="p" href="https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/" target="_blank" rel="noopener">
+    <div class="t">Phi-2: The Surprising Power of Small Language Models</div>
+    <div class="au">M. Javaheripi, S. Bubeck, <b>M. Abdin</b>, et al.</div>
+    <div class="m">Microsoft Research &middot; 2023</div></a>
+
+  <div class="group">Earlier research</div>
+
+  <a class="p" href="https://scholar.google.com/citations?user=uJz6U0kAAAAJ&hl=en" target="_blank" rel="noopener">
+    <div class="t">The "Three-Legged Stool": Designing for Equitable Partnerships in Urban Environmental Sensing</div>
+    <div class="au">M. Daepp, A. Cabral, &hellip;, <b>M. Abdin</b>, et al.</div>
+    <div class="m">CHI &middot; 2023</div></a>
+  <a class="p" href="https://doi.org/10.1088/1748-9326/acf7d5" target="_blank" rel="noopener">
+    <div class="t">Intraurban NO2 Hotspot Detection Across Multiple Air Quality Products</div>
+    <div class="au">A. Montgomery, M. Daepp, <b>M. Abdin</b>, et al.</div>
+    <div class="m">Environmental Research Letters &middot; 2023</div></a>
+  <a class="p" href="https://doi.org/10.1038/s41598-023-38392-3" target="_blank" rel="noopener">
+    <div class="t">Characterizing the Effects of Structural Fires on Fine Particulate Matter with a Dense Sensing Network</div>
+    <div class="au">A. Anyachebelu, A. Cabral, <b>M. Abdin</b>, P. Choudhury, M. Daepp</div>
+    <div class="m">Scientific Reports &middot; 2023</div></a>
+  <a class="p" href="https://doi.org/10.1016/j.patcog.2022.109085" target="_blank" rel="noopener">
+    <div class="t">Distance-Based Positive and Unlabeled Learning for Ranking</div>
+    <div class="au">H. S. Helm, A. Basu, &hellip;, <b>M. Abdin</b>, et al.</div>
+    <div class="m">Pattern Recognition &middot; 2023</div></a>
+  <a class="p" href="https://doi.org/10.1145/3491102.3502027" target="_blank" rel="noopener">
+    <div class="t">Design of Digital Workplace Stress-Reduction Intervention Systems</div>
+    <div class="au">E. Howe, J. Suh, M. Bin Morshed, &hellip;, <b>M. Abdin</b>, et al.</div>
+    <div class="m">CHI &middot; 2022</div></a>
+  <a class="p" href="https://doi.org/10.1109/ACII55700.2022.9953824" target="_blank" rel="noopener">
+    <div class="t">Advancing the Understanding and Measurement of Workplace Stress in Remote Information Workers</div>
+    <div class="au">M. B. Morshed, J. Hernandez, D. McDuff, &hellip;, <b>M. Abdin</b>, et al.</div>
+    <div class="m">ACII &middot; 2022</div></a>
+  <a class="p" href="https://doi.org/10.1063/5.0096686" target="_blank" rel="noopener">
+    <div class="t">Dynamic Adhesion of 2D Materials to Mixed-Phase BiFeO3 Structural Phase Transitions</div>
+    <div class="au">C. Watson, T. Pe&ntilde;a, <b>M. Abdin</b>, T. Khan, S. M. Wu</div>
+    <div class="m">Journal of Applied Physics &middot; 2022</div></a>
+  <a class="p" href="https://arxiv.org/abs/2106.12621" target="_blank" rel="noopener">
+    <div class="t">Leveraging Semantically Similar Queries for Ranking via Combining Representations</div>
+    <div class="au">H. S. Helm, <b>M. Abdin</b>, B. D. Pedigo, et al.</div>
+    <div class="m">arXiv &middot; 2021</div></a>
+
+  <div class="btns">
+    <a href="https://scholar.google.com/citations?user=uJz6U0kAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar &rarr;</a>
+  </div>
+
+  <footer>&copy; <span id="year"></span> Marah Abdin</footer>
+
+</div>
+<script>
+  const root=document.documentElement,tg=document.getElementById('themeToggle');
+  let saved=null; try{saved=localStorage.getItem('theme');}catch(e){}
+  function st(t){root.setAttribute('data-theme',t);tg.textContent=t==='dark'?'☀':'☾';try{localStorage.setItem('theme',t);}catch(e){}}
+  st(saved||'light');
+  tg.addEventListener('click',()=>st(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

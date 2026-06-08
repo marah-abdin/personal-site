@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Marah Abdin</title>
+<meta name="description" content="Marah Abdin. Synthetic data researcher. Synthetic data team lead at Poolside; previously Phi at Microsoft." />
+<meta name="author" content="Marah Abdin" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Marah Abdin" />
+<meta property="og:description" content="Synthetic data research for frontier language models." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #f2f5f2;
+    --panel: #e4f0e9;
+    --ink: #0a2c30;
+    --muted: #506c76;
+    --faint: #8aa6a4;
+    --line: #c6d8d1;
+    --teal: #0f4953;
+    --green: #1c7a55;
+    --pink: #d86592;
+    --pink-weak: rgba(216, 101, 146, 0.14);
+    --sel: rgba(242, 190, 206, 0.45);
+    --accent: var(--green);
+    --accent-weak: rgba(28, 122, 85, 0.14);
+  }
+  html[data-theme="dark"] {
+    --bg: #123439;
+    --panel: #1a444b;
+    --ink: #ecf5f2;
+    --muted: #a1bfbc;
+    --faint: #688b89;
+    --line: #224d54;
+    --teal: #0c4f57;
+    --green: #5fc99c;
+    --pink: #f0a0bb;
+    --pink-weak: rgba(240, 160, 187, 0.18);
+    --sel: rgba(240, 160, 187, 0.24);
+    --accent: var(--green);
+    --accent-weak: rgba(95, 201, 156, 0.16);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--ink);
+    font-size: 16.5px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+    transition: background .35s ease, color .35s ease;
+  }
+  ::selection { background: var(--sel); }
+  a { color: var(--ink); text-decoration: none; }
+
+  .topbar { height: 4px; background: linear-gradient(90deg, var(--green), var(--pink)); }
+
+  /* theme toggle, top right */
+  .toggle {
+    position: fixed; top: 16px; right: 16px; z-index: 50;
+    width: 38px; height: 38px; border-radius: 50%;
+    border: 1px solid var(--line); background: var(--panel); color: var(--muted);
+    cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 15px;
+    transition: transform .25s ease, color .18s, border-color .18s;
+  }
+  .toggle:hover { color: var(--pink); border-color: var(--pink); transform: rotate(18deg); }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 28px 80px; }
+
+  /* top boxed panel */
+  .panel {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 16px; padding: 24px 26px; margin-top: 30px;
+  }
+  .name { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.015em; }
+  .role { margin-top: 7px; color: var(--muted); font-size: 15.5px; }
+  .role b { color: var(--ink); font-weight: 600; }
+  .wit { margin-top: 12px; color: var(--muted); font-style: italic; font-size: 14px; }
+  .accentbar { width: 36px; height: 3px; background: var(--pink); border-radius: 3px; margin: 18px 0; }
+  .panel-row { display: flex; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; }
+  nav.side { display: flex; gap: 18px; flex-wrap: wrap; }
+  nav.side a { font-size: 14px; color: var(--muted); border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  nav.side a:hover { color: var(--green); border-color: var(--green); }
+  .social { display: flex; gap: 16px; flex-wrap: wrap; margin-left: auto; justify-content: flex-end; }
+  .social a { font-size: 13px; color: var(--faint); display: inline-flex; align-items: center; gap: 6px; transition: color .15s; }
+  .social a svg { width: 15px; height: 15px; fill: currentColor; flex: none; }
+  .social a:hover { color: var(--pink); }
+
+  section { padding: 26px 2px; border-top: 1px solid var(--line); margin-top: 22px; }
+  section:first-of-type { border-top: none; }
+  .kicker { font-family: 'Space Grotesk', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: .16em; color: var(--green); font-weight: 700; margin-bottom: 16px; }
+  p { color: var(--muted); margin-bottom: 12px; }
+  .intro p { font-size: 18.5px; line-height: 1.5; color: var(--ink); }
+  .intro a { color: var(--green); border-bottom: 1px solid var(--accent-weak); }
+  .intro a:hover { border-color: var(--green); }
+  .intro b { font-weight: 600; color: var(--ink); }
+
+  .job { display: grid; grid-template-columns: 1fr auto; gap: 2px 18px; padding: 12px 0; }
+  .job + .job { border-top: 1px solid var(--line); }
+  .job .org { font-weight: 700; color: var(--ink); font-family: 'Space Grotesk', sans-serif; font-size: 16.5px; }
+  .job .yr { color: var(--faint); font-size: 13px; text-align: right; }
+  .job .rl { color: var(--green); font-size: 14px; font-weight: 500; }
+  .job .ds { grid-column: 1 / -1; color: var(--muted); font-size: 14.5px; margin-top: 5px; }
+
+  .ink { color: var(--ink); }
+  .figure { margin: 24px 0 4px; padding: 18px 20px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+  .figure svg { width: 100%; height: auto; display: block; }
+  .figcap { font-size: 12.5px; color: var(--faint); margin-top: 8px; text-align: center; }
+  .work > a { display: flex; justify-content: space-between; gap: 14px; padding: 11px 0; align-items: baseline; border-top: 1px solid var(--line); }
+  .work > a:first-of-type { border-top: none; }
+  .worknote { padding: 1px 0 11px; font-size: 12.5px; }
+  .worknote a { color: var(--green); border-bottom: 1px solid var(--accent-weak); }
+  .worknote a:hover { border-color: var(--green); }
+  .work .wt { color: var(--ink); font-size: 15.5px; display: block; }
+  .work > a:hover .wt { color: var(--green); }
+  .work .wau { color: var(--faint); font-size: 12.5px; margin-top: 3px; }
+  .work .wau b { color: var(--muted); font-weight: 600; }
+  .work .wy { color: var(--pink); font-size: 13px; white-space: nowrap; font-weight: 500; }
+  .more { margin-top: 14px; font-size: 14.5px; }
+  .more a { color: var(--green); border-bottom: 1px solid var(--accent-weak); }
+  .more a:hover { border-color: var(--green); }
+
+  .foot { margin-top: 30px; color: var(--faint); font-size: 12.5px; }
+
+  .rv { opacity: 0; transform: translateY(10px); transition: opacity .55s ease, transform .55s ease; }
+  .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce){ .rv{opacity:1;transform:none;transition:none} html{scroll-behavior:auto} }
+
+  @media (max-width: 560px) {
+    .job { grid-template-columns: 1fr; }
+    .job .yr { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<button class="toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">☾</button>
+
+<div class="wrap">
+
+  <header class="panel">
+    <div class="name">Marah I Abdin</div>
+    <div class="role"><b>Synthetic data</b> research for large language models</div>
+    <div class="wit">I talk to LLMs for a living.</div>
+    <div class="accentbar"></div>
+    <div class="panel-row">
+      <nav class="side">
+        <a href="#about">About</a>
+        <a href="#work">Experience</a>
+        <a href="#research">Research</a>
+        <a href="publications.html">Publications</a>
+      </nav>
+      <div class="social">
+        <a href="https://scholar.google.com/citations?user=uJz6U0kAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v3.32C5 18.43 8.13 20 12 20s7-1.57 7-3.5v-3.32l-7 3.82-7-3.82z"/></svg>
+          Scholar
+        </a>
+        <a href="https://x.com/marah_i_abdin" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.8l-5.3-6.93L4.86 22H1.74l8.02-9.17L1 2h6.97l4.79 6.33L18.9 2zm-2.39 18h1.88L7.58 4H5.56l10.95 16z"/></svg>
+          X
+        </a>
+        <a href="https://github.com/marah-abdin" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.2 3.44 9.6 8.21 11.16.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.72-4.04-1.61-4.04-1.61-.55-1.38-1.34-1.75-1.34-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.81 1.3 3.5.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.21.7.82.58A12.01 12.01 0 0 0 24 12.29C24 5.78 18.63.5 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/marah-abdin" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8 19H5V8h3v11zM6.5 6.7C5.5 6.7 4.8 6 4.8 5.1c0-.9.7-1.6 1.7-1.6s1.7.7 1.7 1.6c0 .9-.7 1.6-1.7 1.6zM20 19h-3v-5.6c0-1.3-.5-2.2-1.7-2.2-.9 0-1.4.6-1.7 1.2-.1.2-.1.5-.1.8V19h-3s.04-9.7 0-11h3v1.6c.4-.6 1.1-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4.1V19z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="about" class="intro rv">
+      <p>
+        <b>Synthetic data researcher.</b> I lead the synthetic data team at
+        <a href="https://poolside.ai" target="_blank" rel="noopener">Poolside</a>,
+        building the <b>Laguna</b> large language models. Before that, the <b>Phi</b> models at
+        <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="noopener">Microsoft Research</a>.
+      </p>
+    </section>
+
+    <section id="work" class="rv">
+      <div class="kicker">Experience</div>
+
+      <div class="job">
+        <div class="org">Poolside AI</div>
+        <div class="yr">2025 – Present</div>
+        <div class="rl">Team Lead, Synthetic Data</div>
+        <div class="ds">
+          Started and now leading the synthetic data team, with scope across pre-training, post-training,
+          RL, and agents. The work spans many scales, domains, and pipeline complexities composing
+          <b>Laguna</b>'s <b>5T+</b> synthetic token corpus. A move from big-lab research to a fast-growing startup,
+          in a role that balances leading the team while remaining a hardcore IC.
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="org">Microsoft Frontiers &amp; Microsoft AI (MAI)</div>
+        <div class="yr">2023 – 2025</div>
+        <div class="rl">MTS / Researcher</div>
+        <div class="ds">
+          Worked on the <b>phi</b> open-source models, from <b>Phi-1.5</b> through <b>Phi-4-reasoning</b>,
+          across the Physics of AGI and AI Frontiers groups within Microsoft Research, and at Microsoft AI
+          working toward <b>MAI-1</b>. My synthetic data contributions focused on scale, quality, diversity,
+          and high-reasoning capabilities in STEM and code.
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="org">Microsoft Research</div>
+        <div class="yr">2019 – 2023</div>
+        <div class="rl">Research &amp; engineering</div>
+        <div class="ds">
+          Across Microsoft Research labs in Redmond and New York, working on NLP, human-centered and
+          applied AI, urban environmental sensing, and statistical and network-science research.
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="rv">
+      <div class="kicker">Research interests</div>
+      <p class="ink">
+        My research focuses on expanding what synthetic data can teach models at all stages of training.
+        Rather than treating generation as a way to collect more tokens, I study synthesis as an
+        engineering problem in how generated data can complement organic data, regularize how content is
+        presented, and vary, in more complex ways, how it is taught.
+      </p>
+      <p>
+        My work ranges from simple transformations that vary expression while preserving signal, to
+        compositional multi-step pipelines that change how concepts are taught. Moreover, I am
+        interested in systematically experimenting with synthesis methods to understand which forms of
+        generated data contribute useful training signal, preserve diversity, and compound into new
+        capability rather than simply imitate a stronger model.
+      </p>
+
+      <figure class="figure">
+        <svg viewBox="0 0 600 78" role="img" aria-label="Spectrum of synthesis from organic, seed-heavy data to synthetic, pipeline-heavy data">
+          <defs>
+            <linearGradient id="ax" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="var(--green)"/>
+              <stop offset="1" stop-color="var(--pink)"/>
+            </linearGradient>
+          </defs>
+          <rect x="42" y="20" width="496" height="8" rx="4" fill="url(#ax)"/>
+          <circle cx="42" cy="24" r="5" fill="var(--green)"/>
+          <polygon points="540,18 562,24 540,30" fill="var(--pink)"/>
+          <text x="42" y="50" text-anchor="start" fill="var(--ink)" font-family="Inter,sans-serif" font-size="13" font-weight="600">Organic / seed-heavy</text>
+          <text x="560" y="50" text-anchor="end" fill="var(--ink)" font-family="Inter,sans-serif" font-size="13" font-weight="600">Synthetic / pipeline-heavy</text>
+          <text x="42" y="70" text-anchor="start" fill="var(--faint)" font-family="Inter,sans-serif" font-size="12">lexical regularization</text>
+          <text x="560" y="70" text-anchor="end" fill="var(--faint)" font-family="Inter,sans-serif" font-size="12">compositional distillation</text>
+        </svg>
+      </figure>
+    </section>
+
+    <section id="selected" class="work rv">
+      <div class="kicker">Selected work</div>
+      <a href="https://arxiv.org/abs/2605.27605" target="_blank" rel="noopener">
+        <span><span class="wt">Laguna M.1 / XS.2 Technical Report</span>
+        <span class="wau">J. Abadji, <b>M. Abdin</b>, C. Adams, et al.</span></span><span class="wy">2026</span>
+      </a>
+      <div class="worknote"><a href="https://poolside.ai/assets/laguna/laguna-m1-xs2-technical-report.pdf#page=11" target="_blank" rel="noopener">Synthetic data section &middot; &sect;3.2.2 &rarr;</a></div>
+      <a href="https://neurips.cc/virtual/2025/talk/127746" target="_blank" rel="noopener">
+        <span><span class="wt">Entropy by Design: Synthetic Data at Scale</span>
+        <span class="wau"><b>M. Abdin</b> &middot; NeurIPS talk</span></span><span class="wy">2025</span>
+      </a>
+      <a href="https://arxiv.org/abs/2412.08905" target="_blank" rel="noopener">
+        <span><span class="wt">Phi-4 Technical Report</span>
+        <span class="wau"><b>M. Abdin</b>, J. Aneja, H. Behl, S. Bubeck, et al.</span></span><span class="wy">2024</span>
+      </a>
+      <a href="https://arxiv.org/abs/2410.15226" target="_blank" rel="noopener">
+        <span><span class="wt">On the Diversity of Synthetic Data and its Impact on Training LLMs</span>
+        <span class="wau">H. Chen, A. Waheed, X. Li, &hellip;, <b>M. Abdin</b></span></span><span class="wy">2024</span>
+      </a>
+      <div class="more"><a href="publications.html">All publications &rarr;</a></div>
+      <div class="foot">&copy; <span id="year"></span> Marah Abdin</div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const root = document.documentElement, tg = document.getElementById('themeToggle');
+  let saved = null;
+  try { saved = localStorage.getItem('theme'); } catch(e) {}
+  function setTheme(t){ root.setAttribute('data-theme', t); tg.textContent = t === 'dark' ? '☀' : '☾'; try { localStorage.setItem('theme', t); } catch(e) {} }
+  setTheme(saved || 'light');
+  tg.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((es) => { es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.08 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
